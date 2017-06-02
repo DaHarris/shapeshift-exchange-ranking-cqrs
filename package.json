@@ -1,0 +1,29 @@
+{
+  "name": "shapeshift-exchange-ranking-cqrs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_CONFIG_DIR=\"./node_modules/shapeshift-common-library/config\" node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaHarris/shapeshift-exchange-ranking-cqrs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaHarris/shapeshift-exchange-ranking-cqrs/issues"
+  },
+  "homepage": "https://github.com/DaHarris/shapeshift-exchange-ranking-cqrs#readme",
+  "dependencies": {
+    "async": "^2.4.1",
+    "body-parser": "^1.17.2",
+    "config": "^1.26.1",
+    "express": "^4.15.3",
+    "node-uuid": "^1.4.8",
+    "rabbitmq-wrapper": "git+ssh://git@github.com/DaHarris/rabbitmq-wrapper.git",
+    "redis": "^2.7.1",
+    "shapeshift-common-library": "git+ssh://git@github.com/DaHarris/shapeshift-common-library.git"
+  }
+}
