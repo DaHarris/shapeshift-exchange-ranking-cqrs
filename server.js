@@ -20,9 +20,8 @@ rabbotWrapper.setQ_Subscription('queue.exchangeRankingHandler')
 const rankings = require('./middleware/rankings')
 rabbotWrapper.setHandler('event.externalAPI.exchangeUpdated', rankings.updateExchanges)
 
-// // Routes
-// const exchange = require('./middleware/exchange')
-// router.route('/').get(exchange.getExchangeRates)
+// Routes
+router.route('/').get(rankings.getExchangeRankings)
 
 // Final Express setup
 app.use(bodyParser.json())

@@ -21,6 +21,17 @@ const updateExchanges = function (msg) {
   }
 }
 
+const getExchangeRankings = function (req, res, next) {
+  Rankings.getExchangeRankings(function (err, results) {
+    if (err) {
+      res.status(500).json('There was an error retrieving exchange rankings.')
+    } else {
+      res.status(200).json(results)
+    }
+  })
+}
+
 module.exports = {
-  updateExchanges
+  updateExchanges,
+  getExchangeRankings
 }
